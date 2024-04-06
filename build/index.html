@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grid place-items-center h-screen">
+    <button id="open-modal-btn" class="px-4 py-2 bg-blue-500 text-white rounded">Open Modal</button>
+
+    <!-- modal Wrapper -->
+    <div id="modal-wrapper" class="fixed z-10 inset-0 hidden">
+        <div class="flex items-center justify-center min-h-screen bg-gray-500 bg-opacity-75 transition-all">
+            <!-- modal box -->
+            <div class="flex flex-col items-center justify-between bg-white p-10 rounded w-2/3">
+                <h3 class="text-3xl uppercase font-medium text-purple-700 tracking-wide">Modal In Tailwind Css</h3>
+                <p class="my-8 text-lg text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse molestias voluptatibus facilis vero expedita consectetur ducimus? Sit, hic? Minus earum distinctio voluptate mollitia animi, perferendis molestiae labore voluptatum reiciendis facere nulla dolores?</p>
+                <button id="close-modal-btn" class="bg-red-500 text-white py-3 px-10 rounded">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("open-modal-btn").addEventListener("click", ()=>{
+            document.getElementById("modal-wrapper").classList.remove("hidden")
+        })
+
+        document.getElementById("close-modal-btn").addEventListener("click", () =>{
+            document.getElementById("modal-wrapper").classList.add("hidden")
+        })
+    </script>
+</body>
+</html>
